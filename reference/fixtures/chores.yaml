@@ -1,0 +1,79 @@
+chores:
+    - task: Spülmaschine
+      weekday: 1
+      personId: ben
+    - task: Spülmaschine
+      weekday: 2
+      personId: paul
+    - task: Spülmaschine
+      weekday: 3
+      personId: ben
+    - task: Spülmaschine
+      weekday: 4
+      personId: paul
+    - task: Spülmaschine
+      weekday: 5
+      personId: ben
+    - task: Spülmaschine
+      weekday: 6
+      personId: paul
+    - task: Spülmaschine
+      weekday: 0
+      personId: tom
+    - task: Gäste WC
+      weekday: 6
+      personId: ben
+    - task: Bad
+      weekday: 6
+      personId: paul
+    - task: Staubsaugen EG
+      weekday: 2
+      personId: lena
+    - task: Bio-Müll
+      weekday: 2
+      personId: mia
+    - task: Bio-Müll
+      weekday: 4
+      personId: mia
+    - task: Bio-Müll
+      weekday: 0
+      personId: mia
+    - task: Wäsche
+      weekday: 6
+      personId: lena
+    - task: Glas-Müll
+      weekday: 6
+      personId: mia
+    - task: Kochen
+      weekday: 1
+      personId: mia
+    - task: Kochen
+      weekday: 2
+      personId: lena
+    - task: Kochen
+      weekday: 3
+      personId: ben
+    - task: Kochen
+      weekday: 4
+      personId: paul
+    - task: Kochen
+      weekday: 6
+      personId: tom
+    - task: Einkaufen
+      weekday: 3
+      personId: tom
+    - task: Einkaufen
+      weekday: 6
+      personId: tom
+    - task: Papier-Müll
+      weekday: 4
+      personId: paul
+    - task: Papier-Müll
+      weekday: 0
+      personId: paul
+    - task: Gelber Sack
+      weekday: 3
+      personId: mia
+    - task: Gelber Sack
+      weekday: 0
+      personId: mia

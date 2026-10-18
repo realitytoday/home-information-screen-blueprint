@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- Merge the <touch> element into ~/.config/labwc/rc.xml on the Pi.
+     Find your touch controller's full device name with:  libinput list-devices
+     The name includes the USB port path: moving the cable or swapping the
+     board changes it, and touch silently stops working until you update it.
+     After editing, reload the compositor config:  pkill -HUP labwc  (no reboot).
+     labwc compensates for the output rotation by itself; no transform matrix. -->
+<openbox_config xmlns="http://openbox.org/3.4/rc">
+  <touch deviceName="<your touch controller full device name>"
+         mapToOutput="HDMI-A-1"
+         mouseEmulation="no"/>
+</openbox_config>

@@ -1,0 +1,26 @@
+people:
+    - id: tom
+      name: Tom
+      initials: TO
+      color: '#F2793C'
+      home: true
+    - id: lena
+      name: Lena
+      initials: LE
+      color: '#4FC3D9'
+      home: true
+    - id: ben
+      name: Ben
+      initials: BE
+      color: '#F2C43D'
+      home: false
+    - id: paul
+      name: Paul
+      initials: PA
+      color: '#5BC75E'
+      home: true
+    - id: mia
+      name: Mia
+      initials: MI
+      color: '#A66BE5'
+      home: true

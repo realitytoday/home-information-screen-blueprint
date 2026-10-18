@@ -1,0 +1,55 @@
+# The backend is a separate machine now (the NAS, see
+# CLAUDE.md "Architecture") — this unit used to require
+# home-info-backend.service on the assumption both ran on the Pi, which
+# would now just fail to start since that service doesn't exist here
+# anymore. kiosk-autostart.sh itself refuses to launch without a
+# readable API key file, which is the real "is the backend set up yet"
+# gate.
+#
+# User=kiosk below is a REQUIREMENT this unit hardcodes, not a
+# suggestion — if the Pi's actual account is named anything else (e.g.
+# a randomly-generated username set via Raspberry Pi Imager's advanced
+# options, which is genuinely more secure than the classic "pi"
+# default), the service fails immediately with `status=217/USER`
+# ("Failed to determine user credentials: No such process") and
+# crash-loops silently — no window ever opens, no obvious error unless
+# you check `journalctl -u home-info-kiosk`. Fix via a drop-in override
+# rather than editing this packaged file directly (upgrades would
+# clobber a direct edit even though this specific file isn't a
+# declared `conffile` — the .deb has no way to know you customized it):
+#   sudo systemctl edit home-info-kiosk
+# and add:
+#   [Service]
+#   User=<your actual username>
+# See ../INSTALL.md for the full walkthrough.
+[Unit]
+Description=HomeInformationScreen kiosk browser
+After=graphical.target network-online.target
+Wants=network-online.target
+PartOf=graphical.target
+
+[Service]
+Type=simple
+User=kiosk
+Environment=DISPLAY=:0
+ExecStart=/opt/home-info-screen/kiosk-autostart.sh
+# always, not on-failure: a kiosk should never just sit dead. A clean
+# (status 0) Chromium exit isn't actually success for us — it happens
+# e.g. when Chromium detects an already-running instance for this
+# profile and just forwards the URL to it rather than opening a fresh
+# window, then exits 0 immediately (hit for real provisioning this
+# household's Pi: a stray leftover instance silently absorbed several
+# restart attempts, each logged as a "successful" exit that on-failure
+# correctly declined to restart, leaving the service dead with nothing
+# on screen and no error to see).
+Restart=always
+# 300% = up to 3 full cores (systemd's CPUQuota is per-core, not
+# whole-system) — this Pi is single-purpose (display only, see
+# CLAUDE.md "Architecture": no backend, no Docker here), so Chromium
+# can reasonably use most of it, just not literally all 4 cores, to
+# leave headroom for SSH/the OS itself to stay responsive under load.
+CPUQuota=300%
+RestartSec=3
+
+[Install]
+WantedBy=graphical.target

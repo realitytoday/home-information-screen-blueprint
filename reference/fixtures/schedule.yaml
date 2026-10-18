@@ -1,0 +1,11 @@
+rules:
+    - startHour: 6
+      endHour: 12
+      tab: calendar
+    - startHour: 12
+      endHour: 16
+      tab: weather
+    - startHour: 16
+      endHour: 21
+      tab: orders
+idleTimeoutMs: 300000

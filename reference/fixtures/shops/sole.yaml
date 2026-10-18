@@ -1,0 +1,33 @@
+id: sole
+name: ""
+menuUrl: ""
+catalog: []
+usuals:
+    - id: u-sole-1
+      personId: tom
+      name: Pizza Diavola
+    - id: u-sole-2
+      personId: mia
+      name: Pizza Margherita
+    - id: u-sole-3
+      personId: paul
+      name: Pizza Salami
+menu:
+    - name: Pizza
+      items:
+        - Pizza Margherita
+        - Pizza Salami
+        - Pizza Funghi
+        - Pizza Diavola
+        - Pizza Quattro Formaggi
+        - Pizza Tonno
+        - Pizza Vegetaria
+    - name: Pasta
+      items:
+        - Spaghetti Bolognese
+        - Penne Arrabbiata
+        - Tagliatelle al Salmone
+    - name: Salat
+      items:
+        - Insalata Mista
+        - Caesar Salad

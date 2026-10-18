@@ -1,0 +1,140 @@
+/* Dark is duplicated: the admin site follows the system theme, the kiosk pins data-theme="dark". */
+
+:root {
+	color-scheme: light;
+
+	--background: #fafafa;
+	--foreground: #18181b;
+	--card: #fafafa;
+	--card-foreground: #18181b;
+	--popover: #ffffff;
+	--popover-foreground: #18181b;
+	--primary: #18181b;
+	--primary-foreground: #fafafa;
+	--secondary: #ececee;
+	--secondary-foreground: #18181b;
+	--muted: #f2f2f4;
+	--muted-foreground: #52525b;
+	--faint: #8a8a93;
+	--accent: #ececee;
+	--accent-foreground: #18181b;
+	--border: #e2e2e6;
+	--input: #e2e2e6;
+	--ring: #a1a1aa;
+
+	--destructive: #dc2626;
+	--destructive-foreground: #ffffff;
+	--success: #16a34a;
+	--warning: #b45309;
+	--info: #2563eb;
+	--on-light: #111215;
+	--on-dark: #ffffff;
+
+	--sun: #d97706;
+	--rain: #2563eb;
+
+	--postit: #fde68a;
+	--postit-foreground: #1c1917;
+	--postit-paper: #fffbeb;
+	--postit-sheen: linear-gradient(to bottom, rgb(0 0 0 / 0.07), transparent 2rem),
+		linear-gradient(to top left, rgb(0 0 0 / 0.09), transparent 35%);
+	--postit-curl: rgb(0 0 0 / 0.6);
+
+	--scrim: rgb(0 0 0 / 0.45);
+	--radius: 1rem;
+
+	--sky-sun-day: linear-gradient(to bottom, #1c4f8f, #3f7fc6);
+	--sky-sun-night: linear-gradient(to bottom, #070b1f, #18224a);
+	--sky-partly-day: linear-gradient(to bottom, #2a5486, #5b86b4);
+	--sky-partly-night: linear-gradient(to bottom, #0b1128, #252f4f);
+	--sky-cloud-day: linear-gradient(to bottom, #3b4556, #637085);
+	--sky-cloud-night: linear-gradient(to bottom, #15191f, #2b313b);
+	--sky-fog-day: linear-gradient(to bottom, #555d69, #7f8791);
+	--sky-fog-night: linear-gradient(to bottom, #1c2026, #363b43);
+	--sky-rain-day: linear-gradient(to bottom, #222d3b, #405066);
+	--sky-rain-night: linear-gradient(to bottom, #0d1219, #1f2833);
+	--sky-storm-day: linear-gradient(to bottom, #161b26, #2f3647);
+	--sky-storm-night: linear-gradient(to bottom, #090c12, #1b202b);
+	--sky-snow-day: linear-gradient(to bottom, #4b5b72, #8798b0);
+	--sky-snow-night: linear-gradient(to bottom, #1a2230, #37445a);
+	--sky-dust-day: linear-gradient(to bottom, #6a4c2b, #a47b48);
+	--sky-dust-night: linear-gradient(to bottom, #2a1f14, #4a3825);
+	--sky-rain-drop: #d6e4ff;
+	--sky-snow-flake: #ffffff;
+	--sky-star: #ffffff;
+	--sky-cloud: #ffffff;
+	--sky-sun-glow: #ffd27a;
+	--sky-dust-grain: #f0d3a4;
+
+	--temp-scale: linear-gradient(to right, #60a5fa, #4ade80, #facc15, #fb923c, #f87171);
+}
+
+:root[data-theme='dark'] {
+	color-scheme: dark;
+
+	--background: #111215;
+	--foreground: #f4f4f5;
+	--card: #111215;
+	--card-foreground: #f4f4f5;
+	--popover: #1d1e22;
+	--popover-foreground: #f4f4f5;
+	--primary: #f4f4f5;
+	--primary-foreground: #111215;
+	--secondary: #2a2b30;
+	--secondary-foreground: #f4f4f5;
+	--muted: #1d1e22;
+	--muted-foreground: #a8a8b0;
+	--faint: #74747c;
+	--accent: #2a2b30;
+	--accent-foreground: #f4f4f5;
+	--border: #2a2b30;
+	--input: #2a2b30;
+	--ring: #74747c;
+
+	--destructive: #f87171;
+	--destructive-foreground: #111215;
+	--success: #4ade80;
+	--warning: #fbbf24;
+	--info: #60a5fa;
+
+	--sun: #fbbf24;
+	--rain: #60a5fa;
+
+	--scrim: rgb(0 0 0 / 0.7);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		color-scheme: dark;
+
+		--background: #111215;
+		--foreground: #f4f4f5;
+		--card: #111215;
+		--card-foreground: #f4f4f5;
+		--popover: #1d1e22;
+		--popover-foreground: #f4f4f5;
+		--primary: #f4f4f5;
+		--primary-foreground: #111215;
+		--secondary: #2a2b30;
+		--secondary-foreground: #f4f4f5;
+		--muted: #1d1e22;
+		--muted-foreground: #a8a8b0;
+		--faint: #74747c;
+		--accent: #2a2b30;
+		--accent-foreground: #f4f4f5;
+		--border: #2a2b30;
+		--input: #2a2b30;
+		--ring: #74747c;
+
+		--destructive: #f87171;
+		--destructive-foreground: #111215;
+		--success: #4ade80;
+		--warning: #fbbf24;
+		--info: #60a5fa;
+
+		--sun: #fbbf24;
+		--rain: #60a5fa;
+
+		--scrim: rgb(0 0 0 / 0.7);
+	}
+}

@@ -1,0 +1,6 @@
+# Write-only credentials: the API never returns the password, only whether one is set.
+# In the reference design the real password comes from the environment, not this file.
+url: ""
+username: ""
+password: ""
+enabledCalendars: []

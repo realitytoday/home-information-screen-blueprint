@@ -1,0 +1,39 @@
+# Runs alongside home-info-kiosk.service on the Pi itself (see
+# software/motion-agent's doc comment for why this can't live in the
+# main backend, which runs on the NAS). Same User= caveat as the kiosk
+# unit: "kiosk" below is a placeholder, not guaranteed to match this
+# Pi's real account — see home-info-kiosk.service's header comment for
+# the systemctl-edit override, and additionally this user must be in
+# the "gpio" group (or root) to read /dev/gpiomem:
+#   sudo usermod -aG gpio <your actual username>
+# then log out/in (or reboot) for the group membership to take effect.
+#
+# After=graphical.target: the screen-power command (wlr-randr by
+# default) needs the Wayland compositor's socket to exist, same
+# ordering dependency as the kiosk itself. XDG_RUNTIME_DIR/
+# WAYLAND_DISPLAY below match this household's confirmed real values
+# (see docs/HARDWARE.md and this session's grim-screenshot workflow) —
+# override via `systemctl edit` if a different Pi/session ever uses
+# different values.
+[Unit]
+Description=HomeInformationScreen PIR motion agent (screen power + presence reporting)
+After=graphical.target network-online.target
+Wants=network-online.target
+PartOf=graphical.target
+
+[Service]
+Type=simple
+User=kiosk
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+Environment=WAYLAND_DISPLAY=wayland-0
+EnvironmentFile=-/etc/home-info-screen/motion-agent.env
+ExecStart=/opt/home-info-screen/motion-agent
+Restart=always
+RestartSec=3
+# This daemon does almost nothing (poll one GPIO pin every 200ms, run a
+# shell command occasionally) — a tight quota catches a runaway/bug
+# rather than ever being a real constraint in normal operation.
+CPUQuota=20%
+
+[Install]
+WantedBy=graphical.target

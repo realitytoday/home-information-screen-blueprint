@@ -1,0 +1,20 @@
+id: curryhaus
+name: ""
+menuUrl: ""
+catalog:
+    - number: 12
+      name: Chicken Tikka Masala
+    - number: 18
+      name: Palak Paneer
+    - number: 24
+      name: Lamm Korma
+    - number: 31
+      name: Dal Makhani
+    - number: 40
+      name: Knoblauch-Naan
+usuals:
+    - id: u-curry-1
+      personId: lena
+      number: 18
+      name: Palak Paneer
+menu: []

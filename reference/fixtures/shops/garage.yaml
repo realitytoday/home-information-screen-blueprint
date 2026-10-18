@@ -1,0 +1,24 @@
+id: garage
+name: ""
+menuUrl: ""
+catalog: []
+usuals:
+    - id: u-garage-1
+      personId: ben
+      name: Double Cheese
+    - id: u-garage-2
+      personId: lena
+      name: Veggie Burger
+menu:
+    - name: Burger
+      items:
+        - Classic Burger
+        - Double Cheese
+        - BBQ Bacon
+        - Veggie Burger
+        - Chicken Crispy
+    - name: Beilagen
+      items:
+        - Pommes
+        - Süßkartoffel-Pommes
+        - Onion Rings

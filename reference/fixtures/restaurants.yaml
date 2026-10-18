@@ -1,0 +1,40 @@
+restaurants:
+    - id: sole
+      name: Pizzeria Sole
+      cuisine: Pizza
+      color: '#4C8FBE'
+      icon: pizza
+      minEta: 30
+      maxEta: 45
+      defaultFulfillment: delivery
+      cartEnabled: true
+    - id: garage
+      name: Burger Garage
+      cuisine: Burger
+      color: '#B5533B'
+      icon: burger
+      defaultFulfillment: pickup
+      cartEnabled: true
+    - id: curryhaus
+      name: Curry Haus
+      cuisine: Indisch
+      color: '#A85FBE'
+      icon: bowl
+      minEta: 35
+      maxEta: 50
+      defaultFulfillment: delivery
+      cartEnabled: true
+    - id: eck
+      name: Imbiss am Eck
+      cuisine: Döner
+      color: '#6B9A5A'
+      icon: kebab
+      defaultFulfillment: pickup
+      cartEnabled: true
+    - id: tiefkuehl
+      name: Tiefkühl (TK)
+      cuisine: Vorrat
+      color: '#6FB8D9'
+      icon: snowflake
+      defaultFulfillment: selber
+      cartEnabled: true

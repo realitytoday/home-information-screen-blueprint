@@ -1,0 +1,27 @@
+# Pinned so the named volume doesn't drift to a new, empty one.
+name: home-info-screen
+services:
+  backend:
+    image: ${REGISTRY:-{{SERVER_HOST}}:{{REGISTRY_PORT}}}/home-info-backend:${TAG:-latest}
+    container_name: home-info-backend
+    restart: unless-stopped
+    # Raw ICMP for presence pinging.
+    network_mode: host
+    # Container Manager doesn't grant this implicitly.
+    cap_add:
+      - NET_RAW
+    mem_limit: 512m
+    mem_reservation: 64m
+    cpu_shares: 2048
+    env_file:
+      - .env
+    volumes:
+      - home-info-data:/data
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  home-info-data:

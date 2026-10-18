@@ -1,0 +1,45 @@
+sensors:
+    - id: kueche-leak
+      room: Küche Spüle
+      type: leak
+      deviceMac: 000000000001
+    - id: keller-leak
+      room: Keller Waschmaschine
+      type: leak
+      deviceMac: 000000000002
+    - id: flur-temp
+      room: Flur
+      type: temperature
+      deviceMac: 000000000003
+    - id: flur-humidity
+      room: Flur
+      type: humidity
+      deviceMac: 000000000003
+    - id: flur-door
+      room: Haustür
+      type: door
+      deviceMac: 000000000003
+    - id: bad-temp
+      room: Bad
+      type: temperature
+      deviceMac: 000000000004
+    - id: bad-humidity
+      room: Bad
+      type: humidity
+      deviceMac: 000000000004
+    - id: bad-door
+      room: Bad
+      type: door
+      deviceMac: 000000000004
+    - id: kinder-temp
+      room: Kinderzimmer
+      type: temperature
+      deviceMac: 000000000005
+    - id: kinder-humidity
+      room: Kinderzimmer
+      type: humidity
+      deviceMac: 000000000005
+    - id: garage-door
+      room: Garage
+      type: door
+      deviceMac: 000000000006

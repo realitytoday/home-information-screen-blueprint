@@ -1,0 +1,12 @@
+# Icon=chromium reuses Chromium's own installed icon (guaranteed
+# present since Chromium itself is a hard Depends of this package) —
+# don't swap in a guessed freedesktop icon-theme name here, that's
+# what produced the generic/wrong-looking icon this comment replaced.
+[Desktop Entry]
+Type=Application
+Name=HomeInformationScreen Kiosk
+Comment=Start the wall-panel kiosk display (home-info-kiosk.service)
+Exec=pkexec systemctl start home-info-kiosk
+Icon=chromium
+Terminal=false
+Categories=System;

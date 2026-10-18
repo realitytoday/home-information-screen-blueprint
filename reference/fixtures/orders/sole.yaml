@@ -1,0 +1,13 @@
+pendingOrder:
+    - id: demo-1
+      personId: tom
+      name: Pizza Diavola
+      quantity: 1
+    - id: demo-2
+      personId: mia
+      name: Pizza Margherita
+      quantity: 1
+    - id: demo-3
+      personId: paul
+      name: Pizza Salami
+      quantity: 2
