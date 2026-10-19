@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Wall display with family presence dots, a clock and a tab bar">
+  <rect width="512" height="512" rx="112" fill="#111215"/>
+  <rect x="160" y="64" width="192" height="384" rx="40" fill="none" stroke="#f4f4f5" stroke-width="14"/>
+  <circle cx="196" cy="128" r="12" fill="#F2793C"/>
+  <circle cx="226" cy="128" r="12" fill="#4FC3D9"/>
+  <circle cx="256" cy="128" r="12" fill="#F2C43D"/>
+  <circle cx="286" cy="128" r="12" fill="#5BC75E"/>
+  <circle cx="316" cy="128" r="12" fill="#A66BE5"/>
+  <circle cx="256" cy="246" r="62" fill="none" stroke="#f4f4f5" stroke-width="10"/>
+  <path d="M256 246 V208 M256 246 L282 262" fill="none" stroke="#f4f4f5" stroke-width="10" stroke-linecap="round"/>
+  <rect x="186" y="364" width="140" height="44" rx="22" fill="#2a2b30"/>
+  <circle cx="214" cy="386" r="17" fill="#f4f4f5"/>
+  <circle cx="262" cy="386" r="6" fill="#74747c"/>
+  <circle cx="292" cy="386" r="6" fill="#74747c"/>
+</svg>
